@@ -2,11 +2,16 @@
 <center>
 <h1>Show a beach</h1>
 <form id="beach-info-form" action='/' method="post">
-	Enter Location: <input id="beach" type="text" name="location"><br><br>
-	
-	<input type="submit" value="Find Nearest Beach">
-</form>
+	<select>
+	<option id="beach" value="ocean-beach-sf" name="location">Ocean Beach</option>
+	<option id="beach" value="south-ocean-beach" name="location">S. Ocean Beach</option>
+	<option id="beach" value="pacifica-lindamar" name="location">Pacifica</option>
+	<option id="beach" value="mavericks" name="location">Mavericks</option>
 
+	</select>
+	<input type="submit" value="Show me beach">
+</form>
+<br>
 <div class="append-area">
 
 </div>

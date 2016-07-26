@@ -13,8 +13,7 @@ function getSurfReport() {
 	data: formData
 	})		
 	.done(function(serverData){
-		console.log(serverData);
-		console.log($('.append-area'));
+
 	$('.append-area').append(serverData);		
 	})
   
