@@ -24,7 +24,9 @@ end
 post '/' do
 	@user = current_user
 	@beach = Beach.find_by(location: params[:location])
+	if session[:id] != nil
 	@user.beaches << @beach
+	end
 	redirect "/beach"
 			
 end
