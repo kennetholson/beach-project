@@ -1,2 +1,11 @@
 logged in
-<h1><a href="/logout"> Log Out </a></h1> 
+<p><a href="/logout"> Log Out </a><p> 
+
+<h2>Your recent searches</h2>
+<ul>
+<% @user.beaches.each do |beach| %>
+	<li><%= beach.location %></li>
+		
+			
+<%end %>	
+</ul>

@@ -12,6 +12,8 @@ post '/users/new' do
 end
 
 get "/users/:id" do
+	@user = User.find_by(id: params[:id])
+
 	erb :'users/show'
 end	
 
@@ -20,7 +22,12 @@ get '/beach' do
 end	
 
 post '/' do
+	@user = current_user
 	@beach = Beach.find_by(location: params[:location])
+	@user.beaches << @beach
 	redirect "/beach"
 			
 end
+
+
+
