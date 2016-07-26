@@ -6,7 +6,6 @@ function getSurfReport() {
 	$('#beach-info-form').on('submit', function(event){
 		event.preventDefault();
 		var formData = $('#beach').serialize()
-		console.log(formData);
 
 	$.ajax({
 	url: '/',
@@ -14,7 +13,9 @@ function getSurfReport() {
 	data: formData
 	})		
 	.done(function(serverData){
-	$('#surfcam').append(serverData);		
+		console.log(serverData);
+		console.log($('.append-area'));
+	$('.append-area').append(serverData);		
 	})
   
   });
