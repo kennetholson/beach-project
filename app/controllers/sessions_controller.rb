@@ -7,7 +7,12 @@ post '/sessions/new' do
   @user = User.find_by(email: params["email"])
 
   if @user && @user.password == params["password"]
+    p "before" * 80
+    p session
     login(@user)
+    p "after" * 80
+    p session
+    
     redirect "/users/#{@user.id}"
     
   else

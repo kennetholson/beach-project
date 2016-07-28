@@ -22,6 +22,7 @@ get '/beach' do
 end	
 
 post '/' do
+	p current_user
 	@user = current_user
 	@beach = Beach.find_by(location: params[:location])
 	if request.xhr?
