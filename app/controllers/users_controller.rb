@@ -25,7 +25,6 @@ post '/' do
 	@user = current_user
 	@beach = Beach.find_by(location: params[:location])
 	if request.xhr?
-		p "********************"
 		return erb :'surf/beach', layout: false, locals: {location: @beach}
 	if session[:id] != nil
 	@user.beaches << @beach
